@@ -1,7 +1,11 @@
 {
   "name": "@neotracker/shared-graphql",
   "version": "0.0.1-alpha.0",
-  "keywords": ["neo", "blockchain", "neotracker"],
+  "keywords": [
+    "neo",
+    "blockchain",
+    "neotracker"
+  ],
   "description": "NEO Tracker shared GraphQL code.",
   "repository": "https://github.com/neotracker/neotracker",
   "bugs": "https://github.com/neotracker/neotracker/issues",
@@ -12,7 +16,13 @@
     "@neotracker/logger": "^1.0.0",
     "@neotracker/shared-utils": "^0.0.1-alpha.0",
     "lodash": "^4.17.11",
-    "safe-stable-stringify": "^1.1.0"
+    "safe-stable-stringify": "^1.1.0",
+    "@snyk/protect": "latest"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
