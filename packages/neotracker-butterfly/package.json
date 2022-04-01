@@ -12,7 +12,13 @@
     "github-webhook-event-types": "^1.2.1",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
-    "tmp": "^0.0.33"
+    "tmp": "^0.0.33",
+    "@snyk/protect": "latest"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
